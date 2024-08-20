@@ -1,0 +1,14 @@
+body {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#labelhead {
+  color: hsl(350, 93%, 68%);
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#inputBox{
+  
+}

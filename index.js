@@ -1,4 +1,8 @@
+// number guessing game
 
+const labelhead = document.getElementById("labelhead");
+const inputBox = document.getElementById("inputBox");
+const submitBtn = document.getElementById("submitBtn");
 
 const minNum = 1;
 const maxNum = 100;
@@ -6,7 +10,7 @@ const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
 
 let attempts = 0;
 let guess;
-let running = true;
+let running = false;
 
 while(running){
   guess = window.prompt(`guess a number between ${minNum} - ${maxNum}`)
