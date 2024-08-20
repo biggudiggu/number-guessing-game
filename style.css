@@ -18,11 +18,23 @@ body {
   width: 150px;
 }
 
-#submitBtn {
+button {
   padding: 10px 40px;
   border: none;
   border-radius: 10px;
   background-color: hsl(350, 100%, 88%);
   color: hsl(350, 96%, 62%);
   font-weight: bold;
+}
+
+#submitBtn{
+  padding: 10px 35px;
+}
+
+button:active{
+  background-color: hsl(350, 80%, 82%);
+}
+
+button:hover{
+  color: rgb(254, 0, 42);
 }
