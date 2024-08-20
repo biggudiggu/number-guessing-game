@@ -8,6 +8,8 @@ body {
   color: hsl(350, 93%, 68%);
   font-weight: bold;
   font-size: 1.5em;
+  display: block;
+  margin-bottom: 1.5em;
 }
 
 #inputBox {
