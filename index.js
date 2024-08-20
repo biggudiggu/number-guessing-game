@@ -1,6 +1,7 @@
 // number guessing game
 
 const labelhead = document.getElementById("labelhead");
+const guessLabel = document.getElementById("guessLabel");
 const inputBox = document.getElementById("inputBox");
 const submitBtn = document.getElementById("submitBtn");
 
