@@ -13,6 +13,8 @@ let attempts = 0;
 let guess;
 let running = false;
 
+guessLabel.textContent = `guess a number between ${minNum} - ${maxNum}`
+
 while(running){
   guess = window.prompt(`guess a number between ${minNum} - ${maxNum}`)
   guess = Number(guess);
