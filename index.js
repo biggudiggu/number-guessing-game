@@ -12,7 +12,7 @@ const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
 
 let attempts = 0;
 
-guessLabel.textContent = `Guess a number between ${minNum} - ${maxNum}.`
+guessLabel.textContent = `Guess a number between ${minNum} - ${maxNum}:`
 
 function checkGuess(){
 
@@ -38,6 +38,7 @@ function checkGuess(){
       }
     }
     inputBox.value = "";
+    inputBox.placeholder = "";
   }
 
   resetBtn.onclick = function(){

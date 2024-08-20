@@ -1,5 +1,5 @@
 body {
-  margin-top: 2em;
+  margin-top: 20vh;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -15,7 +15,14 @@ body {
 #inputBox {
   border: 2px solid hsl(0, 1%, 78%);
   border-radius: 5px;
+  border-color: rgb(216, 198, 201);
   width: 150px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+#inputBox::placeholder{
+  opacity: 0.5;
 }
 
 button {
