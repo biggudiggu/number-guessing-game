@@ -33,3 +33,5 @@ Welcome to the Number Guessing Game! This is a simple web-based game where the p
 - HTML: Structure of the game.
 - CSS: Styling of the game interface.
 - JavaScript: Game logic, including random number generation, user input handling, and feedback.
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
