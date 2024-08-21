@@ -30,7 +30,7 @@ function checkGuess(){
         guessLabel.textContent = `${value} IS TOO HIGH! TRY AGAIN!`;
       }
       else{
-        guessLabel.textContent = `CORRECT!! THE ANSWER IST ${answer}. YOU NEEDED ${attempts} ATTEMPTS`;
+        guessLabel.textContent = `CORRECT!! THE ANSWER IS ${answer}. YOU NEEDED ${attempts} ATTEMPTS`;
         inputBox.disabled = true;
         submitBtn.onclick = function(){
           window.location.reload();
