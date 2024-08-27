@@ -12,48 +12,42 @@ const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
 
 let attempts = 0;
 
-guessLabel.textContent = `Guess a number between ${minNum} - ${maxNum}:`
+guessLabel.textContent = `Guess a number between ${minNum} - ${maxNum}:`;
 
-function checkGuess(){
+function checkGuess() {
+  let value = parseInt(inputBox.value);
 
-    let value = parseInt(inputBox.value);
-   
-    if(isNaN(value) || value < minNum || value > maxNum) {
-      guessLabel.textContent = "please enter a valid number"
+  if (isNaN(value) || value < minNum || value > maxNum) {
+    guessLabel.textContent = "please enter a valid number";
+  } else {
+    attempts++;
+    if (value < answer) {
+      guessLabel.textContent = `${value} IS TOO LOW! TRY AGAIN!`;
+    } else if (value > answer) {
+      guessLabel.textContent = `${value} IS TOO HIGH! TRY AGAIN!`;
+    } else {
+      guessLabel.textContent = `CORRECT!! THE ANSWER IS ${answer}. YOU NEEDED ${attempts} ATTEMPTS`;
+      inputBox.disabled = true;
+      submitBtn.onclick = function () {
+        window.location.reload();
+      };
     }
-    else{
-      attempts++;
-      if(value < answer){
-        guessLabel.textContent = `${value} IS TOO LOW! TRY AGAIN!`;
-      }
-      else if(value > answer){
-        guessLabel.textContent = `${value} IS TOO HIGH! TRY AGAIN!`;
-      }
-      else{
-        guessLabel.textContent = `CORRECT!! THE ANSWER IS ${answer}. YOU NEEDED ${attempts} ATTEMPTS`;
-        inputBox.disabled = true;
-        submitBtn.onclick = function(){
-          window.location.reload();
-        }
-      }
-    }
-    inputBox.value = "";
-    inputBox.placeholder = "";
   }
+  inputBox.value = "";
+  inputBox.placeholder = "";
+}
 
-  resetBtn.onclick = function(){
-    window.location.reload();
+resetBtn.onclick = function () {
+  window.location.reload();
+};
+
+submitBtn.addEventListener("click", checkGuess);
+
+inputBox.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    checkGuess();
   }
-
-  submitBtn.addEventListener("click", checkGuess);
-
-  inputBox.addEventListener("keydown", function(event){
-    if(event.key === "Enter"){
-      checkGuess();
-    }
-  });
-
-
+});
 
 // with prompt
 /*
